@@ -130,6 +130,10 @@ a{
     font-size: var(--step-1);
 }
 
+p{
+    font-size: var(--step-1);
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -225,6 +229,51 @@ header a:hover{
     background-color: var(--first-color);
     color: #fff;
 }
+
+/**************** About Us **/
+.about-us{
+    margin-top: 2rem;
+    background-color: var(--first-color);    
+    color: var(--white-color);
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 30rem;
+    align-items: center;
+}
+.about-us .image{    
+    flex: 1 0 35rem;
+    height: 300px;
+    background-color: red;
+    background-image: url('assets/images/nosotros.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.about-us h2{
+    font-weight: 600;    
+    line-height: 2;
+}
+
+.about-us .description{
+    flex: 1 0 35rem;  
+    padding: 3rem;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
