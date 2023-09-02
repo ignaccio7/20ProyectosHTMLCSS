@@ -154,6 +154,7 @@ body p{
 .container {
     max-width: 1000px;
     margin-inline: auto;
+    padding-inline: 2rem;
 }
 
 .text-center{
@@ -268,7 +269,7 @@ header a:hover{
 }
 .about-us .image{    
     flex: 1 0 35rem;
-    height: 300px;
+    height: 35rem;
     background-color: red;
     background-image: url('assets/images/nosotros.jpg');
     background-size: cover;
@@ -301,11 +302,6 @@ main h2{
     text-align: center;    
 }
 
-.card img{    
-    /* display: block; */
-    
-}
-
 .card .description{
     /* background-color: var(--first-color); */
     color: var(--white-color);
@@ -327,7 +323,6 @@ main h2{
 }
 
 
-
 /*comenzamos a usar grid*/
 .products{
     width: 100%;
@@ -335,6 +330,12 @@ main h2{
     grid-template-columns: repeat(6,1fr);
     gap: 1rem;
     justify-content: center;
+}
+.products img{
+    width: 100%;
+    max-height: 30rem;
+    object-fit: cover;
+    object-position: center center;
 }
 /*estilos para el 1er hijo*/
 .products > :nth-child(1) {
@@ -345,10 +346,8 @@ main h2{
     align-items: center;
 }
 .products :nth-child(1) img{    
-    width: 70rem;
-    max-height: 40rem;
+    flex-basis: 70rem;    
     flex-grow: 1;
-    object-fit: cover;
 }
 .products :nth-child(1) .description{    
     flex: 1 0 30rem;
@@ -369,6 +368,36 @@ main h2{
 }
 
 
+/**************** Products **/
+.site-footer{
+    margin: 2rem 0;
+    padding-top: 2rem;
+    border-top: thin solid var(--gray-color);
+}
+
+.site-footer p{
+    padding-top: 1rem;
+}
+
+.site-footer > div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+    gap: 1rem;
+    
+}
+
+.site-footer h3{
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+.site-footer a{
+    display: block;
+    padding: 1rem 0;
+    text-decoration: none;
+    color: var(--black-color);
+    font-weight: bolder;
+}
 
 
 
