@@ -69,8 +69,8 @@
     --black-color: #000;
     --black-alpha-color: rgba(0, 0, 0, 0.5);
 
-    --button-green-color:#8cbc00;
-    --button-green-dark-color:#769c02;
+    --button-green-color: #8cbc00;
+    --button-green-dark-color: #769c02;
 
     --font: "QuicksandLight", sans-serif;
     --font-medium: 'QuicksandMedium', sans-serif;
@@ -130,11 +130,11 @@ h6 {
     /* font-size: 0.7rem; */
 }
 
-a{
+a {
     font-size: var(--step-1);
 }
 
-p{
+p {
     font-size: var(--step-1);
 }
 
@@ -144,10 +144,12 @@ img {
 }
 
 body {
-    overflow-x: hidden;    
+    overflow-x: hidden;
 }
-body p{
-    line-height: 1.5; /*interlineado entre parrafos*/
+
+body p {
+    line-height: 1.5;
+    /*interlineado entre parrafos*/
 }
 
 /**************** Utilities  ******************/
@@ -157,13 +159,13 @@ body p{
     padding-inline: 2rem;
 }
 
-.text-center{
+.text-center {
     text-align: center;
 }
 
 /**************** Components  ******************/
 /**************** Green Button **/
-.btn-green{
+.btn-green {
     display: block;
     width: 100%;
     padding: 1rem;
@@ -214,7 +216,7 @@ header a {
     text-decoration: none;
 }
 
-header a:hover{
+header a:hover {
     color: var(--first-color);
 }
 
@@ -230,168 +232,200 @@ header a:hover{
 }
 
 /**************** Categories Products **/
-.categories-products h2{
+.categories-products h2 {
     padding: 2rem;
     text-align: center;
     font-weight: 600;
 }
-.categories{
+
+.categories {
     display: flex;
     padding: 0 1rem;
     gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
 }
-.categories a{
+
+.categories a {
     max-width: 300px;
     text-align: center;
     color: var(--black-color);
 }
-.categories span{
+
+.categories span {
     font-weight: 600;
     display: inline-block;
     padding: 1rem;
 }
-.categories a:hover{
+
+.categories a:hover {
     background-color: var(--first-color);
-    color: #fff;
+    color: var(--white-color);
 }
 
 /**************** About Us **/
-.about-us{
+.about-us {
     margin-top: 2rem;
-    background-color: var(--first-color);    
+    background-color: var(--first-color);
     color: var(--white-color);
     display: flex;
     flex-wrap: wrap;
     min-height: 30rem;
     align-items: center;
 }
-.about-us .image{    
+
+.about-us .image {
     flex: 1 0 35rem;
     height: 35rem;
-    background-color: red;
     background-image: url('assets/images/nosotros.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.about-us h2{
-    font-weight: 600;    
-    line-height: 2;
+.about-us h2 {
+    font-weight: 600;
+    /* line-height: 2; */
 }
 
-.about-us .description{
-    flex: 1 0 35rem;  
+.about-us .description {
+    flex: 1 0 30rem;
     padding: 3rem;
     text-align: justify;
 }
 
 
 /**************** Products **/
-main h2{
-    padding: 2rem;
+main h2 {
+    padding: 2rem 0;
     font-weight: bold;
 }
+
 /*primero damos diseño a las cards*/
-.card{
+.card {
     /* width: 50rem; */
     width: 100%;
     background-color: var(--first-color);
-    text-align: center;    
+    text-align: center;
 }
 
-.card .description{
+.card .description {
     /* background-color: var(--first-color); */
     color: var(--white-color);
-    padding: 1rem;
+    padding: 2rem;
 }
-.description h3{
-    font-family: var(--font-medium);        
+
+.description .content {
+    /*https://caniuse.com/?search=clamp*/
+    margin-bottom: 1rem;
+    text-align: justify;
+    width: 100%; /* Establece el ancho máximo del contenedor */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Define el límite de líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
-.description .price{
+
+.description h3 {
+    padding: 1rem 0;
+    font-family: var(--font-medium);
+}
+
+.description .price {
+    text-align: center;
     font-family: var(--font-medium);
     font-size: var(--step-2);
-    font-weight: 600;    
+    font-weight: 600;
 }
-.description .price::before{
+
+.description .price::before {
     content: "$ ";
 }
-.description .price::after{
+
+.description .price::after {
     content: " Bs.";
 }
 
 
 /*comenzamos a usar grid*/
-.products{
+.products {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
     justify-content: center;
 }
-.products img{
+
+.products img {
     width: 100%;
     max-height: 30rem;
     object-fit: cover;
     object-position: center center;
 }
+
 /*estilos para el 1er hijo*/
-.products > :nth-child(1) {
+.products> :nth-child(1) {
     grid-column-start: 1;
-    grid-column-end: 7;   
+    grid-column-end: 7;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
-.products :nth-child(1) img{    
-    flex-basis: 70rem;    
+
+.products :nth-child(1) img {
+    flex-basis: 60rem;
+    /*contamos los 1000px que tenemos de ancho y no le ponemos el total ya que tenemos un gap entre fracciones*/
     flex-grow: 1;
 }
-.products :nth-child(1) .description{    
-    flex: 1 0 30rem;
+
+.products :nth-child(1) .description {
+    flex: 1 0 25rem;
+    /*contamos los 1000px que tenemos de ancho y no le ponemos el total ya que tenemos un gap entre fracciones*/
 }
+
 /*estilos para el 1er hijo*/
 
 
 .products :nth-child(2) {
-    grid-column: 1 / 4;    
+    grid-column: 1 / 4;
 }
+
 .products :nth-child(3) {
-    grid-column: 4 / 7;    
+    grid-column: 4 / 7;
 }
+
 .products :nth-child(4),
 .products :nth-child(5),
 .products :nth-child(6) {
-    grid-column: span 2;    
+    grid-column: span 2;
 }
 
 
-/**************** Products **/
-.site-footer{
+/**************** Footer **/
+
+.site-footer {
     margin: 2rem 0;
     padding-top: 2rem;
     border-top: thin solid var(--gray-color);
 }
 
-.site-footer p{
+.site-footer p {
     padding-top: 1rem;
 }
 
-.site-footer > div{
+.site-footer>div {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 1rem;
-    
+
 }
 
-.site-footer h3{
+.site-footer h3 {
     font-weight: bold;
     padding: 1rem 0;
 }
 
-.site-footer a{
+.site-footer a {
     display: block;
     padding: 1rem 0;
     text-decoration: none;
@@ -401,15 +435,13 @@ main h2{
 
 
 
+/**************** MobileDesign ******************/
+@media (max-width:500px) {
+    .products {
+        display: block;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
+    .products>div {
+        margin-bottom: 1rem;
+    }
+}
