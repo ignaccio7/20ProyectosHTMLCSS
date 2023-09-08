@@ -1,0 +1,14 @@
+
+.content-about-us{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 2rem;
+}
+
+.content-about-us .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
