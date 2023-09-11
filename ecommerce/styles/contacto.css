@@ -1,0 +1,59 @@
+
+.contact-form{
+    font-size: var(--step-1);
+}
+
+.contact-form fieldset{
+    border: 1px solid var(--black-alpha-color);
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.contact-form legend{
+    text-align: center;
+    width: 100%;
+    color: var(--white-color);
+    background-color: var(--first-color);
+    padding: 1rem;
+    font-size: var(--step-2);
+    font-weight: bold;
+}
+
+.contact-form .form-group{
+    padding: .5rem 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form-group label{
+    flex-basis: 10rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select{
+    padding: .5rem;
+    margin: .5rem 0;
+}
+
+/* .form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+textarea{    
+    flex-grow: 1;
+} */
+/*tambien se puede hacer de esta forma*/
+.form-group input:not([type="radio"]),
+.form-group textarea,
+.form-group select{    
+    flex-grow: 1;
+    flex-basis: 30rem;
+}
+
+.form-group input[type="radio"]{
+    margin-right:1rem;
+}
+
+

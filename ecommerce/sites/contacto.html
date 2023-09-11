@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce</title>
     <link rel="stylesheet" href="../estilosIndex.css">
-    <link rel="stylesheet" href="../styles/nosotros.css">
+    <link rel="stylesheet" href="../styles/contacto.css">
 </head>
 
 <body>
@@ -29,8 +29,77 @@
 
     <main>
 
-        <!--------------------GALERY-------------------->
+        <!--------------------CONTACT-------------------->
         <h2 class="text-center">Contacto</h2>
+
+        <div class="container max-width-60">
+            <form action="#" class="contact-form">
+                <fieldset>
+                    <legend>Tus datos</legend>
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre :</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Digite el nombre">                        
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asunto">Asunto :</label>
+                        <input type="text" name="asunto" id="asunto" placeholder="Digite asunto">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Email :</label>
+                        <input type="email" name="correo" id="correo" placeholder="Digite correo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Telefono :</label>
+                        <input type="number" name="telefono" id="telefono" placeholder="Digite telefono">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje :</label>
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Digite Mensaje"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>País</legend>
+
+                    <div class="form-group">
+                        <label for="pais">Pais :</label>
+                        <select name="pais" id="pais">
+                            <option value="" selected disabled>Seleccione su pais</option>
+                            <option value="MX">Mexico</option>
+                            <option value="BO">Bolivia</option>
+                            <option value="AR">Argentina</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Información Extra</legend>
+
+                    <div class="form-group">
+                        <label for="cliente">Cliente</label>
+                        <input type="radio" name="tipo" id="cliente">
+                        <label for="proveedor">Proveedor</label>
+                        <input type="radio" name="tipo" id="proveedor">
+                    </div>
+                    <div class="form-group">
+                        <label for="categoria">Categoria de Interes</label>
+                        <input list="categorias" name="categorias">
+                        <datalist id="categorias">
+                            <option value="Cocina">
+                            <option value="Exterior">
+                            <option value="Recamaras">
+                            <option value="Oficina">
+                        </datalist>
+                    </div>
+                </fieldset>
+
+            </form>
+        </div>
 
 
     </main>
