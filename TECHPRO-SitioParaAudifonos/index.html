@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech-Pro</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!--------------------HEADER-------------------->
+    <header class="header">
+        <div class="container">
+            <div class="image-header">
+                <!--En este caso de la imagen del header todas tienen las mismas dimensiones de ancho y alto que es 734x490
+                    asi que solo nos interesaremos en servir la imagen que soporte el navegador respecto al tipo de compresion que estas tienen-->
+                <picture>
+                    <source srcset="./assets/images/header.avif" type="image/avif">
+                    <source srcset="./assets/images/header.webp" type="image/webp">
+                    <img loading="lazy" src="./assets/images/header.png" alt="Logo">
+                </picture>
+            </div>
+            <div class="text-header">
+                <h3>
+                    Sonido Profesional
+                </h3>
+                <h1 class="title">TechPRO</h1>
+                <p class="description-product">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, impedit voluptatibus? Omnis
+                    officia nostrum aliquam repellendus autem quaerat vero facilis debitis adipisci pariatur voluptatum,
+                    unde perferendis eveniet corrupti eligendi molestiae.
+                </p>
+                <div class="price-product">
+                    <span>Desde</span>
+                    <span>$299</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--------------------HEADER-------------------->
+
+    <!--------------------ICONS-------------------->
+    <section class="container">
+        <div class="icons">
+            <div class="icon">
+                <img src="./assets/images/icono-sonido.svg" alt="Sonido">
+                <div class="description">
+                    <h3>GRAN SONIDO</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio maxime consequatur
+                        veritatis quia amet exercitationem rerum odit temporibus repellat dolor accusantium sint, nobis
+                        laboriosam tempore! Beatae tempora excepturi neque blanditiis.
+                    </p>
+                </div>
+            </div>
+            <div class="icon">
+                <img src="./assets/images/icono-garantia.svg" alt="Garantia">
+                <div class="description">
+                    <h3>GARANTIA DE POR VIDA</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio maxime consequatur
+                        veritatis quia amet exercitationem rerum odit temporibus repellat dolor accusantium sint, nobis
+                        laboriosam tempore! Beatae tempora excepturi neque blanditiis.
+                    </p>
+                </div>
+            </div>
+            <div class="icon">
+                <img src="./assets/images/icono-bateria.svg" alt="Bateria">
+                <div class="description">
+                    <h3>+20 HORAS DE BATERIA</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio maxime consequatur
+                        veritatis quia amet exercitationem rerum odit temporibus repellat dolor accusantium sint, nobis
+                        laboriosam tempore! Beatae tempora excepturi neque blanditiis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------ICONS-------------------->
+
+    <!--------------------ABOUT-------------------->
+    <section class="about">
+        <div class="image order-1"></div>
+        <div class="description">
+            <div>
+                <h2>Sobre los TechPRO</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem officia suscipit, similique
+                    laboriosam veritatis dignissimos, eveniet sequi excepturi, alias earum aliquid repellendus nulla
+                    ducimus fuga necessitatibus! Neque deleniti eum corporis.</p>
+            </div>
+        </div>
+    </section>
+    <!--------------------ABOUT-------------------->
+
+    <!--------------------SELECT YOUR HEADPHONES-------------------->
+    <main class="headphones">
+        <h2 class="text-center title">Elige tus TechPRO</h2>
+        <div class="container">
+            <div class="card">
+                <h2>TechPro Z</h2>
+                <span class="price">499</span>
+            </div>
+            <div class="card">
+                <h2>TechPro Y</h2>
+                <span class="price">399</span>
+            </div>
+            <div class="card">
+                <h2>TechPro X</h2>
+                <span class="price">299</span>
+            </div>
+        </div>
+    </main>
+    <!--------------------SELECT YOUR HEADPHONES-------------------->
+
+    <!--------------------NEWSLETTER-------------------->
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="description">
+                <h2>Recibe nuevas actualizaciones</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis accusantium eius reprehenderit
+                    error voluptatum alias, asperiores odio aliquam minima harum qui excepturi a ab aspernatur.
+                    Blanditiis modi aliquid quasi tenetur?</p>
+                <form action="#">                    
+                    <input type="email" class="correo" id="correo" placeholder="Digita tu correo">
+                    <input type="submit" value="Inscribirme">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!--------------------NEWSLETTER-------------------->
+
+    
+    <!--------------------FOOTER-------------------->
+    <footer>
+        <h3>TODOS LOS DERECHOS RESERVADOS</h3>
+    </footer>
+    <!--------------------FOOTER-------------------->
+    
+
+</body>
+
+</html>

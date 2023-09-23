@@ -1,0 +1,469 @@
+
+/**************** Fonts ******************/
+/*https://fonts.google.com/
+    Roboto 400-700-900
+    Lato 400 900
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Roboto:wght@400;700;900&display=swap');
+
+/**************** Custom Properties ******************/
+:root {
+    --first-color: #1073BA;
+    --first-alpha-color: rgba(66, 169, 213, 0.75);
+    --second-color: #00DA55;
+    --second-alpha-color: rgba(59, 214, 51, 0.75);
+    /* --third-color: #501464;
+    --third-alpha-color: rgba(80, 20, 100, 0.75); */
+    --gray-color: #3B3B3B;
+    --gray-dark-color: #666;
+    --gray-light-color: #dedede;
+    --white-color: #fff;
+    --white-alpha-color: rgba(255, 255, 255, 0.5);
+    --black-color: #1F1E1E;
+    --black-alpha-color: rgba(0, 0, 0, 0.5);
+
+    --button-green-color: #8cbc00;
+    --button-green-dark-color: #769c02;
+
+    --font-primary: "Roboto", sans-serif;
+    --font-secondary: 'Lato', sans-serif;
+}
+
+/**************** Fluid Design ******************/
+/*https://utopia.fyi/type/calculator*/
+:root {
+    --step--2: clamp(0.78rem, calc(0.77rem + 0.03vw), 0.80rem);
+    --step--1: clamp(0.94rem, calc(0.92rem + 0.11vw), 1.00rem);
+    --step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+    --step-1: clamp(1.35rem, calc(1.28rem + 0.37vw), 1.56rem);
+    --step-2: clamp(1.62rem, calc(1.50rem + 0.58vw), 1.95rem);
+    --step-3: clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem);
+    --step-4: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
+    --step-5: clamp(2.80rem, calc(2.45rem + 1.77vw), 3.82rem);
+}
+
+html {
+    box-sizing: border-box;
+    /* font-size: 16px; */
+    font-size: 10px;
+    font-family: var(--font-primary);
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/**************** Reset CSS ******************/
+h1 {
+    font-size: var(--step-5);
+    /* font-size: 2rem; */
+}
+
+h2 {
+    font-size: var(--step-4);
+    /* font-size: 1.5rem; */
+}
+
+h3 {
+    font-size: var(--step-3);
+    /* font-size: 1.25rem; */
+}
+
+h4 {
+    font-size: var(--step-2);
+    /* font-size: 1rem; */
+}
+
+h5 {
+    font-size: var(--step-1);
+    /* font-size: 0.85rem; */
+}
+
+h6 {
+    font-size: var(--step-0);
+    /* font-size: 0.7rem; */
+}
+
+a {
+    font-size: var(--step-1);
+}
+
+p {
+    font-size: var(--step-1);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    overflow-x: hidden;
+    font-size: var(--step-1);
+}
+
+body p {
+    line-height: 1.5;
+    /*interlineado entre parrafos*/
+}
+
+/**************** Utilities  ******************/
+.container {
+    max-width: 1000px;
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.max-width-30{
+    max-width: 30rem;
+}
+.max-width-60{
+    max-width: 60rem;
+}
+
+/**************** Components  ******************/
+.title{
+    font-size: calc(var(--step-5) * 1.5);
+    font-weight: 900;    
+
+    color: transparent;
+    /* https://cssgradient.io/
+    https://caniuse.com/?search=background-clip */
+    background: linear-gradient(90deg, var(--first-color) 0%, var(--second-color) 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+/**************** Site Styles  ******************/
+/**************** Configuration Body **/
+/* body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+body main{
+    flex-grow: 1;
+} */
+
+
+/**************** Header **/
+.header{
+    background-color: var(--black-color);   
+    color: var(--white-color);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.header .container{
+    display: flex; 
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.image-header{
+    flex: 1 1 30rem;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.text-header{
+    flex: 2 1 40rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.text-header > *{
+    padding: 1rem 0;
+}
+
+/*.text-header h1{
+    font-size: calc(var(--step-5) * 1.5);
+    font-weight: 900;    
+
+    color: transparent;
+    /* https://cssgradient.io/
+    https://caniuse.com/?search=background-clip */
+/*    background: linear-gradient(90deg, var(--first-color) 0%, var(--second-color) 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+lo volvemos componente ya que lo usaremos mas de una vez
+*/
+
+.text-header h3{
+    font-weight: 700;
+}
+
+.text-header .price-product span:nth-child(2){
+    font-size: var(--step-5);
+    font-weight: 900;
+}
+
+/**************** Icons **/
+.icons{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    gap: 2rem;
+}
+.icon{
+    flex: 1 1 25rem;
+}
+
+.icon img{
+    width: 5rem;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.icon h3{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 900;
+    color: var(--first-color);
+}
+
+.icon p{
+    text-align: justify;
+    padding-inline: 1rem;
+}
+
+
+/**************** About **/
+.about{
+    background-color: var(--first-color);
+    color: var(--white-color);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .image{
+    background-image: url('assets/images/imagen-mujer.jpg');
+    background-size: cover;
+    background-position: right top;
+    flex: 1 1 40rem;
+    height: 40rem;
+}
+/*
+
+1000px ----- 20px
+*/
+.about .description{
+    flex: 1 1 30rem;
+    padding-inline: 2rem;    
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: justify;
+}
+
+.about .description div{
+    max-width: 50rem;
+}
+
+.about .description div > * {
+    padding: 1rem;    
+}
+
+.description h2{
+    font-weight: bold;
+}
+
+/**************** Select your Headphones **/
+.headphones{
+    margin-top: 3rem;
+}
+
+.headphones .container{
+    margin-top: 2rem;
+}
+
+.headphones .card{
+    width: 100%;
+    min-height: 20rem;
+    margin-bottom: 2rem;
+    background-color: var(--gray-light-color);
+    color: var(--first-color);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 3rem;
+    font-weight: bold;
+
+    background-repeat: no-repeat;
+    /* background-position: right; */
+    background-position: 90% center;
+    background-size: 15rem;
+
+    transition: transform .3s ease-in-out, background-size .3s ease-in-out;
+}
+
+.headphones .card .price{
+    font-size: var(--step-4);
+}
+
+.price::before{
+    content: "BS. ";
+}
+
+.headphones .card:first-child{
+    background-color: var(--first-color);
+    color: var(--gray-light-color);
+    background-image: url('./assets/images/modelo-z.svg');
+    /* background-repeat: no-repeat;
+    /* background-position: right; */
+    /* background-position: 90% center;
+    background-size: 20rem; */ 
+}
+.headphones .card:first-child h2{
+    font-size: var(--step-5);
+    padding-bottom: 2rem;
+}
+
+.headphones .card:nth-child(2){
+    background-image: url('./assets/images/modelo-y.svg');
+}
+
+.headphones .card:last-child{
+    background-image: url('./assets/images/modelo-x.svg');
+}
+
+
+/**************** NewsLetter **/
+.newsletter{
+    margin-top: 3rem;
+    background-image: linear-gradient(to bottom, transparent 50%, var(--white-color) 50%), url('./assets/images/newsletter.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;    
+}
+
+.newsletter .container{
+    display: grid;
+    grid-template-rows: repeat(2,30rem);
+    min-height: 40rem;    
+}
+
+.newsletter .description{
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;    
+    min-height: 30rem;
+    padding-inline: 2rem;
+}
+
+.newsletter form > *{
+    display: block;
+    width: 100%;
+    padding: 1.2rem;
+}
+
+.newsletter input[type="submit"]{
+    border: none;
+    background-color: var(--first-color);
+    color: var(--white-color);
+    font-size: var(--step-3);
+
+}
+
+.newsletter input[type="email"]:focus{    
+    outline: 1px solid var(--first-alpha-color);
+}
+
+
+/**************** Footer **/
+footer{
+    padding: 3rem;
+    text-align: center;
+    color: var(--first-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* DESKTOP */
+@media screen and (min-width: 720px){
+    .order-1{
+        order: 1;
+    }
+    .header .text-header{
+        text-align: left;
+    }
+
+    .headphones .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    .headphones .card{
+        margin-bottom: 0;
+    }
+
+    .headphones .card:first-child{
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        justify-content: center;
+        background-size: 20rem;
+    }
+
+    .newsletter{
+        background-image: linear-gradient(to right, transparent 50%, var(--white-color) 50%), url('./assets/images/newsletter.jpg');
+        background-size: cover;
+        background-position: left center;
+    }
+
+    .newsletter .container{
+        grid-template-rows: unset;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+    }
+    
+    .newsletter .description{
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+    }
+
+}
+
+
+
+
+/**************** Animations and Transitions **/
+.headphones .card:hover{
+    transform: scale(1.02);
+    background-size: 30rem;
+}
+
+
+
+
+
+
+
+
+
