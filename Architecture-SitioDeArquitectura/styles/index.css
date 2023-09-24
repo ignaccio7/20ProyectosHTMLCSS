@@ -1,0 +1,266 @@
+
+/**************** Imports ******************/
+
+/* PARA FORMATEAR LOS ESTILOS PREDETERMINADOS DE LOS NAVEGADORES**/
+@import url("./reset.css");
+
+/******************************** PARA FORMATEAR LOS ESTILOS **/
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Light.ttf') format('truetype'),
+        url('../fonts/Raleway-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'RalewaySemiBold';
+    src: url('../fonts/Raleway-SemiBold.ttf') format('truetype'),
+        url('../fonts/Raleway-SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'RalewayBold';
+    src: url('../fonts/Raleway-Bold.ttf') format('truetype'),
+        url('../fonts/Raleway-Bold.woff') format('woff');
+}
+
+
+/**************** Custom Properties ******************/
+:root{
+    /******* Colors */
+    --first-color: #037bc0;
+    --first-alpha-color: rgba(0, 152, 217, 0.75);
+    --second-color: #111;
+    --second-alpha-color: rgba(20, 25, 45, 0.75);
+    --third-color: #501464;
+    --third-alpha-color: rgba(80, 20, 100, 0.75);
+    --gray-color: #343a40;
+    --gray-dark-color: #666;
+    --gray-light-color: #f3f3f3;
+    --gray-light-alpha-color: #f3f3f395;
+    --white-color: #fff;
+    --white-alpha-color: rgba(255, 255, 255, 0.5);
+    --black-color: #000;
+    --black-alpha-color: rgba(0, 0, 0, 0.5);
+    /******* Fonts */
+    --font: "Raleway", sans-serif;
+    --font-semi: 'RalewaySemiBold', sans-serif;
+    --font-bold: 'RalewayBold', sans-serif;
+    /******* Steps */
+    /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1280,20,1.25,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    --step--2: clamp(0.78rem, 0.78rem + 0.03vw, 0.80rem);
+    --step--1: clamp(0.94rem, 0.92rem + 0.10vw, 1.00rem);
+    --step-0: clamp(1.13rem, 1.08rem + 0.21vw, 1.25rem);
+    --step-1: clamp(1.35rem, 1.28rem + 0.35vw, 1.56rem);
+    --step-2: clamp(1.62rem, 1.51rem + 0.56vw, 1.95rem);
+    --step-3: clamp(1.94rem, 1.78rem + 0.83vw, 2.44rem);
+    --step-4: clamp(2.33rem, 2.09rem + 1.20vw, 3.05rem);
+    --step-5: clamp(2.80rem, 2.46rem + 1.69vw, 3.82rem);
+    --step-6: clamp(3.36rem, 2.89rem + 2.35vw, 4.77rem);
+
+    --separation-padding: 3rem;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: var(--font);
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+h1 {
+    margin: 0;
+    font-size: var(--step-6);
+    /* font-size: 2rem; */
+}
+
+h2 {
+    font-size: var(--step-5);
+    /* font-size: 1.5rem; */
+}
+
+h3 {
+    font-size: var(--step-4);
+    /* font-size: 1.25rem; */
+}
+
+h4 {
+    font-size: var(--step-3);
+    /* font-size: 1rem; */
+}
+
+h5 {
+    font-size: var(--step-2);
+    /* font-size: 0.85rem; */
+}
+
+h6 {
+    font-size: var(--step-1);
+    /* font-size: 0.7rem; */
+}
+
+a {
+    font-size: var(--step-1);
+}
+
+p {
+    font-size: var(--step-1);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/**************** Utilities  ******************/
+
+.container{
+    max-width: 120rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    width: 90%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/**************** Components  ******************/
+/**************** Button **/
+.btn{
+    color: var(--gray-color);
+    background-color: var(--white-color);
+    border: 1px solid var(--gray-color);
+    padding: .5rem .2rem;
+}
+
+.btn:hover{
+    background-color: var(--gray-color);
+    color: var(--white-color);
+}
+
+
+/**************** Site Styles  ******************/
+
+/**************** Header **/
+.header{
+    min-height: 80vh;
+    color: var(--white-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--separation-padding) 0;
+    background-image: url('../assets/images/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.header a{
+    display: block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.header a:hover{
+    color: var(--black-color);
+    font-weight: bold;
+    background-color: var(--gray-light-alpha-color);
+}
+
+.header nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.header h2{
+    padding: 2rem 0;
+}
+.header h2 span, .header h1{
+    font-family: var(--font-bold);
+}
+
+.header h1{
+    font-size: var(--step-5);
+    padding-bottom: 1rem;
+}
+
+.header .phone a::before{
+    content: '';
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-image: url('../assets/images/telefono.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 1rem;
+}
+
+
+
+
+/**************** DesktopDesign ******************/
+
+@media screen and (min-width: 768px) {
+    .header .information{
+        display: flex;
+        justify-content: space-between;
+    }
+    .header .phone{
+        text-align: right;
+    }
+    .header nav{
+        flex-direction: row-reverse;
+        align-items: end;
+        flex-wrap: wrap;
+    }
+    .header .slogan{
+        text-align: right;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
