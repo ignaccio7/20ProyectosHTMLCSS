@@ -109,6 +109,7 @@ a {
 
 p {
     font-size: var(--step-1);
+    text-align: justify;
 }
 
 img {
@@ -132,6 +133,10 @@ body {
 
 .text-center{
     text-align: center;
+}
+
+.mt-3{
+    margin-top: 3rem;
 }
 
 /**************** Components  ******************/
@@ -207,8 +212,89 @@ body {
     margin-right: 1rem;
 }
 
+/**************** About us **/
 
+.about-us .container{
+    margin-top: 3rem;    
+}
+.about-us h2{
+    font-family: var(--font-bold);
+    font-weight: 900;
+}
+.about-us .description > *{
+    margin: 2rem 0;
+}
+.about-us p{
+    text-align: justify;
+}
+.about-us .image{
+    min-height: 60vh;
+    background-image: url('../assets/images/nosotros.jpg');
+    background-size: cover;
+    background-position: bottom center;    
+}
 
+/**************** Models **/
+.models{
+    margin-top: 3rem;
+}
+
+.models .container > h2{    
+    font-family: var(--font-bold);
+}
+.models .container h2{
+    font-weight: bold;
+}
+
+.models .description>*{
+    margin: 2rem 0;
+}
+
+.models .description button{
+    padding: .5rem 2rem;
+    margin: 1rem 0;
+    font-size: var(--step-1);
+    background-color: transparent;
+    border: 1px solid var(--gray-dark-color);
+    cursor: pointer;
+    color: var(--gray-dark-color);
+    transition: background-color .5s ease, color .5s ease;
+}
+
+.models .description button:hover{
+    background-color: var(--gray-dark-color);
+    color: var(--gray-light-color);
+}
+
+/**************** Galery **/
+.galery{
+    margin-top: 2rem;
+}
+.galery h2{
+    font-family: var(--font-bold);
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.galery .contain{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: 30rem;
+}
+.galery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.galery img:nth-child(2){
+    grid-row: span 2;
+}
+.galery img:nth-child(6){
+    grid-row: 3 / 5;
+}
+.galery img:last-child{
+    grid-column: span 2;
+}
 
 /**************** DesktopDesign ******************/
 
@@ -228,6 +314,84 @@ body {
     .header .slogan{
         text-align: right;
     }
+    
+    .about-us .container{
+        margin-top: 0;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(4,1fr);
+    }
+    .about-us .image{
+        grid-row: 2 / 5;
+        grid-column: 1 / 4;
+    }
+    .about-us .description{
+        grid-column: 2 / 5;
+        grid-row: 1 / 3;
+        background-color: white;
+        order: 1;
+        align-self: center;
+        padding: 1rem;
+    }
+
+    .model{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(4,15rem);        
+        margin-top: 2rem;
+    }
+    .model .description{
+        background-color: var(--white-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 2rem;
+        order: 1;
+    }
+    .model img{
+        height: 100%;
+        object-fit: cover;
+        object-position: left center;
+    }
+    .basic img{
+        grid-column: 1 / 4;
+        grid-row: 1 / 5;        
+    }
+    .basic .description{
+        grid-column: 3 / 5;
+        grid-row: 1 / 3;
+    }
+    .premier img{
+        grid-column: 2 / 5;
+        grid-row: 1 / 5;        
+    }
+    .premier .description{
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+    }
+    .elite img{
+        grid-column: 1 / 4;
+        grid-row: 1 / 5;        
+    }
+    .elite .description{
+        grid-column: 3 / 5;
+        grid-row: 3 / 5;
+    }
+
+    .galery .contain{        
+        grid-template-columns: repeat(3,1fr);   
+        grid-auto-flow: dense;     
+    }
+    .galery img:nth-child(2){
+        grid-column: 3 / 4;
+    }
+    .galery img:nth-child(6){
+        grid-row: 2 / 4;
+    }
+    .galery img:last-child{
+        grid-column: unset;
+    }
+
 }
 
 
