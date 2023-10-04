@@ -40,7 +40,7 @@
     --white-color: #fff;
     --white-alpha-color: rgba(255, 255, 255, 0.5);
     --black-color: #000;
-    --black-alpha-color: rgba(0, 0, 0, 0.5);
+    --black-alpha-color: rgba(0, 0, 0, 0.7);
     /******* Fonts */
     --font: "Raleway", sans-serif;
     --font-semi: 'RalewaySemiBold', sans-serif;
@@ -157,7 +157,7 @@ body {
 /**************** Site Styles  ******************/
 
 /**************** Header **/
-.header{
+.header, .footer{
     min-height: 80vh;
     color: var(--white-color);
     text-align: center;
@@ -171,28 +171,28 @@ body {
     background-position: bottom center;
 }
 
-.header a{
+.header a,.footer a{
     display: block;
     padding: 1rem 2rem;
     text-decoration: none;
     color: var(--white-color);
 }
 
-.header a:hover{
+.header a:hover,.footer a:hover{
     color: var(--black-color);
     font-weight: bold;
     background-color: var(--gray-light-alpha-color);
 }
 
-.header nav{
+.header nav, .footer nav{
     display: flex;
     flex-direction: column;
 }
 
-.header h2{
+.header h2,.footer h2{
     padding: 2rem 0;
 }
-.header h2 span, .header h1{
+.header h2 span, .header h1, .footer h2 span, .footer h1{
     font-family: var(--font-bold);
 }
 
@@ -201,7 +201,7 @@ body {
     padding-bottom: 1rem;
 }
 
-.header .phone a::before{
+.header .phone a::before, .footer .phone a::before{
     content: '';
     display: inline-block;
     width: 2rem;
@@ -296,22 +296,38 @@ body {
     grid-column: span 2;
 }
 
+/**************** Footer **/
+.footer{
+    margin-top: 3rem;
+    min-height: 60vh;
+    position: relative;
+}
+.footer > div:nth-child(2){
+    background-color: var(--black-alpha-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    font-size: var(--step-0);
+}
+
 /**************** DesktopDesign ******************/
 
 @media screen and (min-width: 768px) {
-    .header .information{
+    .header .information, .footer .information{
         display: flex;
         justify-content: space-between;
     }
-    .header .phone{
+    .header .phone, .footer .phone{
         text-align: right;
     }
-    .header nav{
+    .header nav, .footer nav{
         flex-direction: row-reverse;
         align-items: end;
         flex-wrap: wrap;
     }
-    .header .slogan{
+    .header .slogan, .footer .slogan{
         text-align: right;
     }
     
