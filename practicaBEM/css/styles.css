@@ -1,0 +1,158 @@
+:root {
+    --blanco: #FFF;
+    --negro: #111111;
+    --gris: #343a40;
+
+    --azul: #0071b7;
+    --blanco: #FFF;
+    --naranja: #ff4f1e;
+    --fuentePrincipal: 'Raleway', sans-serif;
+
+
+    --green: #49b464;
+
+}
+html {
+
+    background-color: var(--azul);
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/** Globales **/
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+}
+h1, h2, h3 {
+    font-weight: 900;
+    margin: 2rem 0;
+}
+h1 {
+    font-size: 4.8rem;
+    text-align: center;
+    color: var(--blanco);
+}
+h2 {
+    font-size: 5.8rem;
+}
+p {
+    line-height: 1.8;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+.contenedor {
+    max-width: 120rem;
+    margin-inline: auto;
+    width: 90%;
+}
+
+
+.caja-curso {
+    background-color: var(--naranja);
+    text-align: center;
+    color: var(--blanco);
+    padding: 5rem;
+
+}
+.caja-curso h1 {
+    margin: 0;
+}
+.caja-curso p {
+    font-size: 2.4rem;
+}
+.caja-curso a {
+    font-size: 2.4rem;
+    padding: 2rem;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 0;
+}
+
+/**Nos podemos dar cuenta que evitamos la anidacion como .products .product .content*/
+/********* Products ****/
+.products{
+    margin-top: 3rem;
+}
+
+.products__title{
+    color: var(--blanco);
+    text-align: center;
+}
+
+.products__grid{
+    display: grid;
+}
+
+/********* Product ****/
+.product{
+    background-color: var(--blanco);
+    margin-bottom: 2rem;
+}
+
+.product__content{
+    padding: 2rem;
+}
+
+.product__name{
+    font-size: 3rem;
+    text-decoration: underline;
+}
+
+.product__description{
+    text-align: justify;
+}
+
+.product__prices{
+    display: flex;
+    justify-content: space-between;
+}
+.product__price{
+    font-size: 3rem;
+    color: var(--green);
+    font-weight: 900;
+}
+/* block__element--modifier */
+.product__price--old{
+    color: var(--naranja);
+    text-decoration: line-through;
+}
+.product__price::before{
+    content: "$ ";
+}
+
+.product__button{
+    all:unset; /*Para eliminar todos los estilos que vienen por defecto del navegador*/
+    padding: 1rem 0;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: var(--azul);
+    color: var(--blanco);
+    cursor: pointer;
+}
+.product__button:hover{
+    background-color: #2e88c0;
+}
+
+
+/**** Deskotp design*/
+@media (min-width: 768px) {
+    .products__grid{
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+    }   
+    .product{
+        margin-bottom: 0;
+    }
+}
+
+
