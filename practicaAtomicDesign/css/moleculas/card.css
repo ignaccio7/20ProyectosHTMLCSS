@@ -1,0 +1,20 @@
+
+@import url('../style.css');
+
+.card{
+    border: thick solid var(--teal);
+    width: 300px;
+    background-color: var(--light-teal);
+}
+.card__info{
+    padding: 20px;
+}
+.card__info>*{
+    margin: 1rem;
+}
+
+
+
+
+
+

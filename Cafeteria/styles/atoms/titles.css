@@ -1,0 +1,38 @@
+@import url('../style.css');
+
+.header__title{
+    color: var(--white-color);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10rem 0;
+}
+
+h2{
+    color: var(--first-color);
+    font-family: var(--font-medium);
+    font-weight: bold;
+}
+h4{
+    color: var(--second-color);
+    font-weight: 600;
+}
+h3{
+    color: var(--first-color);
+    text-align: center;
+}
+
+[class$="__subtitle--white"]{
+    color: white;
+}
+
+h3.menu__title{
+    color: white;
+    font-weight: 900;
+    padding: 3rem 0;
+}
+
+h4.dish__title{
+    color: white;
+    font-weight: 600;
+}
+

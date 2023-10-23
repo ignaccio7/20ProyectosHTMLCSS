@@ -1,0 +1,15 @@
+@import url('../style.css');
+
+.cards{
+    display: flex;
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+    border: medium solid var(--teal);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cards>*{
+    margin: 1rem;
+}
+

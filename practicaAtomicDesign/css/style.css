@@ -1,0 +1,87 @@
+
+/*
+    -> Protones  - son basicamente estilos de colores de subtitulos de textos etc algo que vamos a reutilizar
+
+    -> Atomos - serian componentes como botones inputs labels imagenes etc.
+
+    -> Moleculas - Estan compuestas por atomos
+
+    -> Organismos - Son un grupo de Moleculas . serian elementos mas complejos
+
+    -> Plantillas - Seria un elemento que contendria nuestra pagina
+
+*/
+
+/*********** Fuente *****/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,700&family=Poppins:wght@400;500;700;900&display=swap');
+
+:root{
+    --black: #000;
+    --white: #fff;
+    --navy: #4c4c6d;
+    --light-teal: #e8f6ef;
+    --teal: #1b9c85;
+    --yellow: #ffe194;
+}
+
+
+/*********** Estilos Unicamente Esteticos *****/
+.protones, .atomos, .moleculas, .organismos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.protones>*, .atomos>*, .moleculas>*, .organismos>*{
+    margin: 1rem;
+}
+
+/*********** Protones *****/
+.title{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--navy);
+}
+
+.subtitle{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--navy);
+}
+.circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.circle--navy{
+    background-color: var(--navy);
+}
+.circle--teal{
+    background-color: var(--teal);
+}.circle--yellow{
+    background-color: var(--yellow);
+}.circle--light-teal{
+    background-color: var(--light-teal);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

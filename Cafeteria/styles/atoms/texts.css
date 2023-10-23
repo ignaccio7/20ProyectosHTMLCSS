@@ -1,0 +1,21 @@
+@import url('../style.css');
+p{
+    padding: 3rem 0;
+}
+p.dish__description{
+    font-size: var(--step-1);
+    color: var(--second-color);
+    font-weight: 600;
+    padding: .5rem 0;
+}
+
+.price{
+    color: var(--white-color);
+    font-size: var(--step-4);
+    font-family: var(--font-bold);
+    font-weight: bold;
+    min-width: 4ch;
+}
+.price::before{
+    content: "$ ";
+}

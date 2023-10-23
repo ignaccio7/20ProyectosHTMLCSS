@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafeteria</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/atoms/titles.css">
+    <link rel="stylesheet" href="./styles/atoms/texts.css">
+    <!-- Atomos css -->
+    <link rel="stylesheet" href="./styles/atoms/images.css">
+    <link rel="stylesheet" href="./styles/atoms/links.css">
+    <!-- Moleculas css -->
+    <link rel="stylesheet" href="./styles/molecules/nav.css">
+    <link rel="stylesheet" href="./styles/molecules/navbar.css">
+    <link rel="stylesheet" href="./styles/molecules/subtitle.css">
+    <link rel="stylesheet" href="./styles/molecules/service.css">
+    <link rel="stylesheet" href="./styles/molecules/dish.css">
+    <link rel="stylesheet" href="./styles/molecules/galery.css">
+    <!-- Organismos css -->
+    <link rel="stylesheet" href="./styles/organisms/header.css">
+    <link rel="stylesheet" href="./styles/organisms/services.css">
+    <link rel="stylesheet" href="./styles/organisms/card.css">
+    <link rel="stylesheet" href="./styles/organisms/menu.css">
+</head>
+
+<body>
+    <!---------------- HEADER ----------->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__navbar">
+                <img src="./assets/img/logo.svg" alt="logo" class="header__image">
+
+                <nav class="nav">
+                    <a href="#" class="nav__link nav__link--active">INICIO</a>
+                    <a href="#" class="nav__link">NOSOTROS</a>
+                    <a href="#" class="nav__link">PROCESO</a>
+                    <a href="#" class="nav__link">MENU</a>
+                    <a href="#" class="nav__link">GALERIA</a>
+                    <a href="#" class="nav__link">CONTACTO</a>
+                </nav>
+
+            </div>
+            <h1 class="header__title">Disfruta de una deliciosa taza de cafe</h1>
+        </div>
+    </header>
+    <!---------------- HEADER ----------->
+
+    <!---------------- MAIN ----------->
+    <main class="card card__container">
+        <!--MOLECULA-->
+        <div class="card__subtitle">
+            <h4>CONOME MAS</h4>
+            <h2>SOBRE NOSOTROS</h2>
+        </div>
+        <img src="./assets/img/cafe.svg" alt="cafe" class="card__icon">
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nostrum,
+            reprehenderit at voluptatum
+            laudantium ea eaque rerum quo pariatur vel aliquid debitis deleniti consequuntur deserunt assumenda
+            error
+            optio suscipit facilis.</p>
+
+        <!--MOLECULA-->
+        <!---------------- SERVICES ----------->
+        <div class="services">
+            <div class="services__service">
+                <img src="./assets/img/icono_cafe.svg" alt="cafe" class="services__icon">
+                <h3>Café</h3>
+            </div>
+            <div class="services__service">
+                <img src="./assets/img/icono_postre.svg" alt="postres" class="services__icon">
+                <h3>Postres</h3>
+            </div>
+            <div class="services__service">
+                <img src="./assets/img/icono_te.svg" alt="te" class="services__icon">
+                <h3>Té</h3>
+            </div>
+        </div>
+        <!---------------- SERVICES ----------->
+
+        <!---------------- GALERY ----------->
+        <div class="galery">
+            <div class="galery__subtitle">
+                <h4>VIVE LA</h4>
+                <h2>EXPERIENCIA</h2>
+            </div>
+            <img src="./assets/img/cafe.svg" alt="cafe" class="galery__icon">
+
+            <!-- <img src="./assets/img/galeria/galeria_01.jpg" alt="Galeria" class="galery__image"> -->
+            <!-- img[src="./assets/img/galeria/galeria_0$.jpg" alt="imagen $" class="galery__image"]*10 -->
+            <!--MOLECULA-->
+            <div class="galery__grid">
+                <img src="./assets/img/galeria/galeria_01.jpg" alt="imagen 1" class="galery__image">
+                <img src="./assets/img/galeria/galeria_02.jpg" alt="imagen 2" class="galery__image">
+                <img src="./assets/img/galeria/galeria_03.jpg" alt="imagen 3" class="galery__image">
+                <img src="./assets/img/galeria/galeria_04.jpg" alt="imagen 4" class="galery__image">
+                <img src="./assets/img/galeria/galeria_05.jpg" alt="imagen 5" class="galery__image">
+                <img src="./assets/img/galeria/galeria_06.jpg" alt="imagen 6" class="galery__image">
+                <img src="./assets/img/galeria/galeria_07.jpg" alt="imagen 7" class="galery__image">
+                <img src="./assets/img/galeria/galeria_08.jpg" alt="imagen 8" class="galery__image">
+                <img src="./assets/img/galeria/galeria_09.jpg" alt="imagen 9" class="galery__image">
+                <img src="./assets/img/galeria/galeria_10.jpg" alt="imagen 10" class="galery__image">
+            </div>
+        </div>
+        <!---------------- GALERY ----------->
+    </main>
+    <!---------------- MAIN ----------->
+    
+    <!---------------- MENU ----------->
+    <section class="menu">
+        <div class="menu__container">
+            <div class="menu__subtitle">
+                <h4 class="menu__subtitle--white">NUESTRO DELICIOSO</h4>
+                <h2 class="menu__subtitle--white">MENÚ</h2>                
+            </div>
+            <div class="menu__grid">
+                <!---------------- DISH ----------->
+                <div class="menu__coffe">
+                    <!--MENU-->
+                    <h3 class="menu__title">CAFÉ</h3>
+                    <div class="dish">
+                        <div class="dish__content">
+                            <h4 class="dish__title">Café Latte</h4>
+                            <p class="dish__description">Café Espresso conleche caliente evaporada</p>
+                        </div>
+                        <span class="price">25</span>
+                    </div>
+                    <div class="dish">
+                        <div class="dish__content">
+                            <h4 class="dish__title">Café Mocha</h4>
+                            <p class="dish__description">Café Espresso conleche caliente evaporada</p>
+                        </div>
+                        <span class="price">25</span>
+                    </div>
+                    <div class="dish">
+                        <div class="dish__content">
+                            <h4 class="dish__title">Café Americano</h4>
+                            <p class="dish__description">Café negro</p>
+                        </div>
+                        <span class="price">25</span>
+                    </div>
+                    <div class="dish">
+                        <div class="dish__content">
+                            <h4 class="dish__title">Café Latte</h4>
+                            <p class="dish__description">Café Espresso conleche caliente evaporada</p>
+                        </div>
+                        <span class="price">25</span>
+                    </div>
+                    <div class="dish">
+                        <div class="dish__content">
+                            <h4 class="dish__title">Café Latte</h4>
+                            <p class="dish__description">Café Espresso conleche caliente evaporada</p>
+                        </div>
+                        <span class="price">25</span>
+                    </div>
+                </div>
+                <div class="menu__food">
+                    <!--MENU-->
+                    <h3 class="menu__title">COMIDA</h3>
+                    <div class="dish">
+                        <div class="dish__content">
+                            <h4 class="dish__title">Banguette de Pollo</h4>
+                            <p class="dish__description">Delicioso Baguette con pollo a la plancha</p>
+                        </div>
+                        <span class="price">25</span>
+                    </div>
+                    <div class="dish">
+                        <div class="dish__content">
+                            <h4 class="dish__title">Café Latte</h4>
+                            <p class="dish__description">Café Espresso conleche caliente evaporada</p>
+                        </div>
+                        <span class="price">25</span>
+                    </div>
+                    <div class="dish">
+                        <div class="dish__content">
+                            <h4 class="dish__title">Café Latte</h4>
+                            <p class="dish__description">Café Espresso conleche caliente evaporada</p>
+                        </div>
+                        <span class="price">25</span>
+                    </div>
+                    <div class="dish">
+                        <div class="dish__content">
+                            <h4 class="dish__title">Café Latte</h4>
+                            <p class="dish__description">Café Espresso conleche caliente evaporada</p>
+                        </div>
+                        <span class="price">25</span>
+                    </div>
+                    <div class="dish">
+                        <div class="dish__content">
+                            <h4 class="dish__title">Café Latte</h4>
+                            <p class="dish__description">Café Espresso conleche caliente evaporada</p>
+                        </div>
+                        <span class="price">25</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!---------------- MENU ----------->
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>

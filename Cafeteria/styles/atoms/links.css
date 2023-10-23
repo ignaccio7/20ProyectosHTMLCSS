@@ -1,0 +1,14 @@
+
+@import url('./links.css');
+
+.nav__link{
+    font-weight: bold;
+    font-family: var(--font-medium);
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.nav__link--active{
+    color: var(--first-light-color);
+}
+

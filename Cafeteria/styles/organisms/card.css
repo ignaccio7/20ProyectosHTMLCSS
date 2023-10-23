@@ -1,0 +1,13 @@
+@import url('../style.css');
+
+.card{
+    text-align: center;
+    background-color: var(--white-color);
+    padding: 5rem 2rem;
+}
+
+@media (min-width:768px) {
+    .card{
+        margin-top: -20rem;
+    }
+}

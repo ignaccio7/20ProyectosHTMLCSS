@@ -1,0 +1,28 @@
+@import url('../style.css');
+
+.button{
+    padding: 1rem 2rem;
+    background-color: transparent;    
+    border: none;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.button--primary{
+    border: medium solid var(--teal);
+}
+.button--primary:hover{
+    background-color: var(--teal);
+    color: white;
+}
+
+.button--secondary{
+    border: medium solid var(--yellow);
+}
+.button--secondary:hover{
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+

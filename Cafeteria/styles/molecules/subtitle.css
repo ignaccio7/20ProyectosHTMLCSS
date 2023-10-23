@@ -1,0 +1,12 @@
+
+/* [class$="__subtitle"]{ selecciona si termina con  
+    [class*="__subtitle"]{ selecciona si contiene     
+    [class^="__subtitle"]{ selecciona si termina con  
+*/
+[class*="subtitle"]{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+

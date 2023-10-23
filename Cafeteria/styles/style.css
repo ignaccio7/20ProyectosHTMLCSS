@@ -1,0 +1,182 @@
+
+/*
+    -> Protones  - son basicamente estilos de colores de subtitulos de textos etc algo que vamos a reutilizar
+
+    -> Atomos - serian componentes como botones inputs labels imagenes etc.
+
+    -> Moleculas - Estan compuestas por atomos
+
+    -> Organismos - Son un grupo de Moleculas . serian elementos mas complejos
+
+    -> Plantillas - Seria un elemento que contendria nuestra pagina
+
+*/
+
+
+/**************** Imports ******************/
+
+
+
+/**************** Fluid Design ******************/
+/*https://utopia.fyi/type/calculator*/
+:root {
+    --step--2: clamp(0.78rem, calc(0.77rem + 0.03vw), 0.80rem);
+    --step--1: clamp(0.94rem, calc(0.92rem + 0.11vw), 1.00rem);
+    --step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+    --step-1: clamp(1.35rem, calc(1.28rem + 0.37vw), 1.56rem);
+    --step-2: clamp(1.62rem, calc(1.50rem + 0.58vw), 1.95rem);
+    --step-3: clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem);
+    --step-4: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
+    --step-5: clamp(2.80rem, calc(2.45rem + 1.77vw), 3.82rem);
+}
+
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype'),
+        url('../assets/fonts/Roboto-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'RobotoMedium';
+    src: url('../assets/fonts/Roboto-Medium.ttf') format('truetype'),
+        url('../assets/fonts/Roboto-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('../assets/fonts/Roboto-Bold.ttf') format('truetype'),
+        url('../assets/fonts/Roboto-Bold.woff') format('woff');
+}
+
+/**************** Custom Properties ******************/
+:root {
+    --first-color: #573121;
+    --first-light-color: #dbd2bc;
+    --first-alpha-color: rgba(0, 152, 217, 0.75);
+    --second-color: #a16f26;
+    --second-light-color: #e2d9cb;
+    --second-alpha-color: rgba(20, 25, 45, 0.75);
+    --third-color: #501464;
+    --third-alpha-color: rgba(80, 20, 100, 0.75);
+    --gray-color: #eceeef;
+    --gray-dark-color: #666;
+    --gray-light-color: #f3f3f3;
+    --white-color: #fff;
+    --white-alpha-color: rgba(255, 255, 255, 0.5);
+    --black-color: #000;
+    --black-alpha-color: rgba(0, 0, 0, 0.5);
+
+    --button-green-color: #8cbc00;
+    --button-green-dark-color: #769c02;
+
+    --font: "Roboto", sans-serif;
+    --font-medium: 'RobotoMedium', sans-serif;
+    --font-bold: 'RobotoBold', sans-serif;
+}
+
+/*https://www.paulirish.com/2012/box-sizing-border-box-ftw/*/
+
+/* 
+hacemos esto para que cuando un usuario determine el tamaño de letra de su navegador nosotros adoptemos ese tamaño que el escogio y no lo dejemos estatico en 16px sino nos jugaremos con 10px de momento que es por defecto y si el usuario cambia entonces cambiara
+16px = 100%
+10px = ?
+
+(10 * 100) / 16 = 62.5 % 
+*/
+
+html {
+    box-sizing: border-box;
+    /* font-size: 16px; */
+    font-size: 62.5%;
+    font-family: var(--font);
+    background-color: var(--second-light-color);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1 {
+    margin: 0;
+    font-size: var(--step-5);
+    font-family: var(--font-medium);
+    /* font-size: 2rem; */
+}
+
+h2 {
+    font-size: var(--step-4);
+    /* font-size: 1.5rem; */
+}
+
+h3 {
+    font-size: var(--step-3);
+    /* font-size: 1.25rem; */
+}
+
+h4 {
+    font-size: var(--step-2);
+    /* font-size: 1rem; */
+}
+
+h5 {
+    font-size: var(--step-1);
+    /* font-size: 0.85rem; */
+}
+
+h6 {
+    font-size: var(--step-0);
+    /* font-size: 0.7rem; */
+}
+
+a {
+    font-size: var(--step-1);
+}
+
+p {
+    font-size: var(--step-1);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body p {
+    line-height: 1.5;
+    /*interlineado entre parrafos*/
+}
+
+/**************** Utilities  ******************/
+/* .container {
+    max-width: 1000px;
+    margin-inline: auto;
+    padding-inline: 2rem;
+} */
+
+[class$="__container"] {
+    max-width: 1000px;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    z-index: 100;
+    position: relative;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.max-width-30{
+    max-width: 30rem;
+}
+.max-width-60{
+    max-width: 60rem;
+}
+
+

@@ -1,0 +1,21 @@
+@import url('../style.css');
+
+.menu{
+    padding: 10rem 0;
+    background-color: var(--first-color);
+    background-image: url('../../assets/img/menu_arriba.svg'),url('../../assets/img/menu_abajo.svg');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center 2rem, center 95%;
+}
+
+
+@media (min-width:768px) {
+    .menu__grid{
+        display: grid;
+        /* grid-template-columns: repeat(auto-fit,minmax(40rem,1fr)); */
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+}
+
