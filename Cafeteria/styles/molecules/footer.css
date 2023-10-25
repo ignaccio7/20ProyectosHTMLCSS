@@ -1,0 +1,6 @@
+@import url('../style.css');
+
+.footer{
+    background-color: var(--first-color);
+    color: var(--white-color);
+}

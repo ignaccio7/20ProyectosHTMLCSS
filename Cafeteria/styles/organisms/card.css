@@ -10,4 +10,10 @@
     .card{
         margin-top: -20rem;
     }
+    .card--about{
+        margin-top: -5rem;              
+    }
+    .card--footer{
+        margin-top: 0;
+    }
 }

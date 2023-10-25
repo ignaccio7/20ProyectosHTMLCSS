@@ -1,7 +1,7 @@
 @import url('../style.css');
 
 .menu{
-    padding: 10rem 0;
+    padding: 15rem 0;
     background-color: var(--first-color);
     background-image: url('../../assets/img/menu_arriba.svg'),url('../../assets/img/menu_abajo.svg');
     background-size: 50%;

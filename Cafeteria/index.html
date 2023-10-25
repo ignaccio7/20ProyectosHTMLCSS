@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&display=swap" rel="stylesheet">
     <title>Cafeteria</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
@@ -14,16 +16,21 @@
     <link rel="stylesheet" href="./styles/atoms/links.css">
     <!-- Moleculas css -->
     <link rel="stylesheet" href="./styles/molecules/nav.css">
+    <link rel="stylesheet" href="./styles/molecules/location.css">
     <link rel="stylesheet" href="./styles/molecules/navbar.css">
     <link rel="stylesheet" href="./styles/molecules/subtitle.css">
     <link rel="stylesheet" href="./styles/molecules/service.css">
     <link rel="stylesheet" href="./styles/molecules/dish.css">
     <link rel="stylesheet" href="./styles/molecules/galery.css">
+    <link rel="stylesheet" href="./styles/molecules/post.css">
+    <link rel="stylesheet" href="./styles/molecules/footer.css">
     <!-- Organismos css -->
     <link rel="stylesheet" href="./styles/organisms/header.css">
     <link rel="stylesheet" href="./styles/organisms/services.css">
     <link rel="stylesheet" href="./styles/organisms/card.css">
     <link rel="stylesheet" href="./styles/organisms/menu.css">
+    <link rel="stylesheet" href="./styles/organisms/location.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 
 <body>
@@ -107,13 +114,13 @@
         <!---------------- GALERY ----------->
     </main>
     <!---------------- MAIN ----------->
-    
+
     <!---------------- MENU ----------->
     <section class="menu">
         <div class="menu__container">
             <div class="menu__subtitle">
                 <h4 class="menu__subtitle--white">NUESTRO DELICIOSO</h4>
-                <h2 class="menu__subtitle--white">MENÚ</h2>                
+                <h2 class="menu__subtitle--white">MENÚ</h2>
             </div>
             <div class="menu__grid">
                 <!---------------- DISH ----------->
@@ -201,8 +208,60 @@
     </section>
     <!---------------- MENU ----------->
 
+    <!---------------- ABOUT  ----------->
+    <section class="about">
+        <div class="about__container">
+            <div class="card card--about">
+                <div class="card__subtitle">
+                    <h4>LO QUE DICEN NUESTROS</h4>
+                    <h2>CLIENTES</h2>
+                </div>
+                <img src="./assets/img/cafe.svg" alt="cafe" class="card__icon">
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <div class="post">
+                    <p class="post__description post__description--left">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, corrupti ipsum unde porro
+                        in voluptates sed reiciendis quia earum ad minima delectus maxime assumenda magni distinctio
+                        iure ex animi? Reprehenderit?
+                        Officia, debitis qui? Earum impedit atque officia labore consequuntur ex perferendis quaerat, ut
+                        velit non in beatae dolore quisquam est repellendus omnis assumenda facere. A aspernatur
+                        molestias velit quae soluta.
+                    </p>
+                    <span class="post__author post__author--right">
+                        Juan De la Torre
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------- ABOUT ----------->
+
+    <!---------------- FOOTER ----------->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="location">
+                <div class="location__group">
+                    <h3 class="location__title">UBICACIÓN</h3>
+                    <p class="location__content">Nicolas Coper 59990 Jalisco</p>
+                </div>
+                <div class="location__group">
+                    <h3 class="location__title">RESERVACIÓN</h3>
+                    <p class="location__content">Tel. <a href="tel:+38050-9102" class="tel">38050-9102</a>
+                        <br>Llamar
+                    </p>
+                </div>
+                <div class="location__group">
+                    <h3 class="location__title">HORARIO</h3>
+                    <p class="location__content">
+                        Lun-Juev 11:00 - 22:00 <br>
+                        Vie-Sab 09:00 - 23:00
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p class="footer__content--center">Todos los derechos reservados la cafeteria</p>
+    </footer>
+    <!---------------- FOOTER ----------->
 </body>
 
 </html>
