@@ -1,0 +1,38 @@
+.card {
+    padding-inline: 3rem;
+}
+
+.about__frame {
+    max-width: 35rem;
+    margin: 3rem auto;
+}
+
+.about__image {
+    border: 1px solid white;
+    transform: rotate(-5deg);
+    box-shadow: 5px 5px 10px 5px rgb(0 0 0 / .35);
+    padding: 2rem;
+}
+
+.about__content {
+    text-align: left;
+}
+
+.about__subtitle{
+    display: unset;
+    font-size: var(--step-2);
+    border-left: thick solid var(--first-color);
+    padding: 1rem;
+}
+
+@media (min-width:768px) {
+    .about {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+        align-items: center;
+        align-content: center;
+    }
+
+    .about__image {}
+}
